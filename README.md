@@ -1,2 +1,2 @@
 # austin-resume
-My resume website
+My portfolio website
