@@ -1,2 +1,2 @@
-# austin-portfolio
-My portfolio website
+# austin-resume
+My resume website as a website developer.
