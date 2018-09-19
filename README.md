@@ -1,2 +1,2 @@
-# austin-resume
+# austin-portfolio
 My portfolio website
