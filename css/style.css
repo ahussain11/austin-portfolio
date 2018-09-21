@@ -19,7 +19,17 @@
     border-bottom: 2px solid var(--brown);
 }
 
+.light-shadow {
+    text-shadow: var(--light-shadow);
+}
+.dark-shadow {
+    text-shadow: var(--dark-shadow);
+}
+
 /* Style */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     box-sizing: border-box;
@@ -35,8 +45,7 @@ body {
     gap: 15px 0px;
     grid-template-columns: auto 1fr auto;
 }
-
-header nav {
+header > nav {
     width: 400px;
     grid-column: 3;
 }
@@ -49,6 +58,9 @@ header nav {
     padding: 0 0 10px 10px;
     border-left: 2px solid var(--brown);
 }
+.nav-grid:nth-last-child(1) {
+    border-right: 2px solid var(--brown);
+}
 
 .title {
     height: calc(100vh - 70px);
@@ -57,17 +69,27 @@ header nav {
     align-items: center;
 }
 .title h1 {
+    margin-top: 15vh;
     padding-bottom: 30px;
     border-bottom: 2px solid var(--brown);
 }
 
-.portfolio-grid {
-    padding: 0 10px;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+.title > a {
+margin: 30vh;
 }
 
+.glyphicon-menu-down {
+    font-size: 30px;
+    color: var(--white);
+}
+
+.portfolio-grid {
+    padding: 0 10px;
+    margin-bottom: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
 .site-preview {
     height: 300px;
     background: var(--brown);
@@ -84,15 +106,50 @@ header nav {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    /* space around */
 }
-
 .footer-icons {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+.fab {
+    color: var(--white);
+    font-size: 30px;
+}
+.fas {
+    font-size: 30px;
 }
 
-footer a:hover {
-    text-decoration: none;
-}
+/* Media Queries */
 
+@media screen and (max-width: 500px) {
+    .header-grid {
+        background: var(--blue);
+        height: 100px;
+        padding: 20px 20px 0 20px;
+        display: grid;
+        gap: 15px 0px;
+        justify-items: center;
+        grid-template-areas: 
+        'logo'
+        'nav'
+        ;
+        grid-template-columns: 1fr;
+    }
+    .logo {
+        grid-area: logo;
+    }
+    header > nav {
+        grid-area: nav;
+    }
+
+    .footer-grid {
+        height: 200px;
+        background: var(--blue);
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+} 
