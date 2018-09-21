@@ -1,0 +1,98 @@
+/* Variables */
+
+:root {
+    /* Fonts */
+    
+  
+    /* Colors */
+    --white: #ECECEA;
+    --blue: #558C89;
+    --light-blue: #74AFAD;
+    --brown: #D9853B;
+    --light-shadow: rgba(0, 0, 0, .2);
+    --dark-shadow: rgba(0, 0, 0, .6);
+  }
+
+/* OOCSS   */
+
+.current {
+    border-bottom: 2px solid var(--brown);
+}
+
+/* Style */
+
+body {
+    box-sizing: border-box;
+    background: var(--light-blue);
+    color: var(--white);
+}
+
+.header-grid {
+    background: var(--blue);
+    height: 70px;
+    padding: 20px 20px 0 20px;
+    display: grid;
+    gap: 15px 0px;
+    grid-template-columns: auto 1fr auto;
+}
+
+header nav {
+    width: 400px;
+    grid-column: 3;
+}
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+.nav-item {
+    padding: 0 0 10px 10px;
+    border-left: 2px solid var(--brown);
+}
+
+.title {
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title h1 {
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--brown);
+}
+
+.portfolio-grid {
+    padding: 0 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.site-preview {
+    height: 300px;
+    background: var(--brown);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-grid {
+    height: 100px;
+    background: var(--blue);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    /* space around */
+}
+
+.footer-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+

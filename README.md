@@ -1,2 +1,2 @@
 # austin-resume
-My resume website
+My resume website as a website developer.
